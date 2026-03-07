@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Шанс на любовь – Найди свою половинку</title>
+  <title>ШансНаЛюбовь – Найди свою половинку</title>
   
   <!-- ===== PRELOAD FIRST IMAGES ===== -->
   <link rel="preload" as="image" href="images/girl1.jpg">
@@ -215,7 +215,6 @@
       50% { opacity: 0.4; }
     }
     
-    /* ===== PINK/PURPLE CARD BOTTOM ===== */
     .profile-info {
       padding: 25px 20px;
       text-align: center;
@@ -540,8 +539,8 @@
 
   <!-- ===== HERO ===== -->
   <section class="hero">
-    <h1>Найди свою любовь рядом</h1>
-    <a href="#profiles" class="hero-btn" id="mainCta">Вторая Шанс</a>
+    <h1>Найди свою половинку</h1>
+    <a href="#profiles" class="hero-btn" id="mainCta">Шанс на любовь</a>
   </section>
 
   <!-- ===== PROFILES ===== -->
@@ -549,7 +548,7 @@
     <h2 class="section-title">Популярные анкеты сегодня</h2>
     
     <div class="profiles-grid" id="profilesGrid">
-      <!-- Profiles will be added via JavaScript -->
+      <!-- Профили будут добавлены через JavaScript -->
     </div>
 
     <!-- ===== MORE PROFILES BUTTON ===== -->
@@ -573,10 +572,10 @@
         <!-- TESTIMONIAL 1 -->
         <div class="testimonial-card">
           <div class="testimonial-header">
-            <img src="images/men1.jpg" alt="Александр" class="testimonial-avatar">
+            <img src="images/man1.jpg" alt="Александр" class="testimonial-avatar">
             <div class="testimonial-user">
               <div class="testimonial-name">Александр, 52</div>
-              <div class="testimonial-meta">из Москвы</div>
+              <div class="testimonial-meta">из Киева</div>
             </div>
           </div>
           <div class="stars">★★★★★</div>
@@ -587,10 +586,10 @@
         <!-- TESTIMONIAL 2 -->
         <div class="testimonial-card">
           <div class="testimonial-header">
-            <img src="images/men2.jpg" alt="Дмитрий" class="testimonial-avatar">
+            <img src="images/man2.jpg" alt="Дмитрий" class="testimonial-avatar">
             <div class="testimonial-user">
               <div class="testimonial-name">Дмитрий, 48</div>
-              <div class="testimonial-meta">из Санкт-Петербурга</div>
+              <div class="testimonial-meta">из Львова</div>
             </div>
           </div>
           <div class="stars">★★★★★</div>
@@ -601,10 +600,10 @@
         <!-- TESTIMONIAL 3 -->
         <div class="testimonial-card">
           <div class="testimonial-header">
-            <img src="images/men3.jpg" alt="Сергей" class="testimonial-avatar">
+            <img src="images/man3.jpg" alt="Сергей" class="testimonial-avatar">
             <div class="testimonial-user">
               <div class="testimonial-name">Сергей, 54</div>
-              <div class="testimonial-meta">из Казани</div>
+              <div class="testimonial-meta">из Одессы</div>
             </div>
           </div>
           <div class="stars">★★★★☆</div>
@@ -633,8 +632,12 @@
       <a href="/terms.html">Пользовательское соглашение</a> • 
       <a href="/disclaimer.html">Оферта</a>
     </div>
+    <div class="disclaimer">
+      Это рекламная страница. Мы не гарантируем создание пар. 
+      Все профили вымышлены и предназначены только для демонстрации.
+    </div>
     <div style="margin-top:10px; opacity:0.5">
-      © 2024 ВтораяШанс. Все права защищены.
+      © 2024 ШансНаЛюбовь. Все права защищены.
     </div>
   </footer>
 
@@ -650,38 +653,38 @@
     const mainCta = document.getElementById('mainCta');
     const moreProfilesBtn = document.getElementById('moreProfilesBtn');
     
-    // ===== БАЗА ДАННЫХ ПРОФИЛЕЙ (30 ФОТО) =====
+    // ===== БАЗА ДАННЫХ ПРОФИЛЕЙ (30 ФОТО) - ГОРОДА УКРАИНЫ =====
     const allProfiles = [
-      { name: 'Анна', age: 42, city: 'Москва', img: 'girl1.jpg' },
-      { name: 'Елена', age: 48, city: 'Санкт-Петербург', img: 'girl2.jpg' },
-      { name: 'Ольга', age: 51, city: 'Казань', img: 'girl3.jpg' },
-      { name: 'Наталья', age: 45, city: 'Новосибирск', img: 'girl4.jpg' },
-      { name: 'Татьяна', age: 53, city: 'Екатеринбург', img: 'girl5.jpg' },
-      { name: 'Светлана', age: 49, city: 'Нижний Новгород', img: 'girl6.jpg' },
-      { name: 'Ирина', age: 46, city: 'Самара', img: 'girl7.jpg' },
-      { name: 'Марина', age: 50, city: 'Краснодар', img: 'girl8.jpg' },
-      { name: 'Юлия', age: 44, city: 'Ростов-на-Дону', img: 'girl9.jpg' },
-      { name: 'Галина', age: 47, city: 'Уфа', img: 'girl10.jpg' },
-      { name: 'Людмила', age: 52, city: 'Челябинск', img: 'girl11.jpg' },
-      { name: 'Нина', age: 43, city: 'Воронеж', img: 'girl12.jpg' },
-      { name: 'Валентина', age: 54, city: 'Пермь', img: 'girl13.jpg' },
-      { name: 'Зинаида', age: 41, city: 'Волгоград', img: 'girl14.jpg' },
-      { name: 'Раиса', age: 46, city: 'Красноярск', img: 'girl15.jpg' },
-      { name: 'Лариса', age: 55, city: 'Саратов', img: 'girl16.jpg' },
-      { name: 'Вера', age: 45, city: 'Тольятти', img: 'girl17.jpg' },
-      { name: 'Надежда', age: 48, city: 'Ижевск', img: 'girl18.jpg' },
-      { name: 'Любовь', age: 50, city: 'Барнаул', img: 'girl19.jpg' },
-      { name: 'Нина', age: 47, city: 'Ульяновск', img: 'girl20.jpg' },
-      { name: 'Алла', age: 44, city: 'Иркутск', img: 'girl21.jpg' },
-      { name: 'Тамара', age: 53, city: 'Хабаровск', img: 'girl22.jpg' },
-      { name: 'Римма', age: 46, city: 'Ярославль', img: 'girl23.jpg' },
-      { name: 'Эмма', age: 49, city: 'Владивосток', img: 'girl24.jpg' },
-      { name: 'Майя', age: 52, city: 'Махачкала', img: 'girl25.jpg' },
-      { name: 'Инна', age: 45, city: 'Тюмень', img: 'girl26.jpg' },
-      { name: 'Алина', age: 48, city: 'Кемерово', img: 'girl27.jpg' },
-      { name: 'Полина', age: 51, city: 'Новокузнецк', img: 'girl28.jpg' },
-      { name: 'Диана', age: 47, city: 'Рязань', img: 'girl29.jpg' },
-      { name: 'Карина', age: 50, city: 'Астрахань', img: 'girl30.jpg' }
+      { name: 'Анна', age: 42, city: 'Киев', img: 'girl1.jpg' },
+      { name: 'Елена', age: 48, city: 'Львов', img: 'girl2.jpg' },
+      { name: 'Ольга', age: 51, city: 'Одесса', img: 'girl3.jpg' },
+      { name: 'Наталья', age: 45, city: 'Харьков', img: 'girl4.jpg' },
+      { name: 'Татьяна', age: 53, city: 'Днепр', img: 'girl5.jpg' },
+      { name: 'Светлана', age: 49, city: 'Запорожье', img: 'girl6.jpg' },
+      { name: 'Ирина', age: 46, city: 'Полтава', img: 'girl7.jpg' },
+      { name: 'Марина', age: 50, city: 'Винница', img: 'girl8.jpg' },
+      { name: 'Юлия', age: 44, city: 'Ивано-Франковск', img: 'girl9.jpg' },
+      { name: 'Галина', age: 47, city: 'Черновцы', img: 'girl10.jpg' },
+      { name: 'Людмила', age: 52, city: 'Тернополь', img: 'girl11.jpg' },
+      { name: 'Нина', age: 43, city: 'Луцк', img: 'girl12.jpg' },
+      { name: 'Валентина', age: 54, city: 'Ровно', img: 'girl13.jpg' },
+      { name: 'Зинаида', age: 41, city: 'Хмельницкий', img: 'girl14.jpg' },
+      { name: 'Раиса', age: 46, city: 'Черкассы', img: 'girl15.jpg' },
+      { name: 'Лариса', age: 55, city: 'Кропивницкий', img: 'girl16.jpg' },
+      { name: 'Вера', age: 45, city: 'Николаев', img: 'girl17.jpg' },
+      { name: 'Надежда', age: 48, city: 'Сумы', img: 'girl18.jpg' },
+      { name: 'Любовь', age: 50, city: 'Житомир', img: 'girl19.jpg' },
+      { name: 'Нина', age: 47, city: 'Чернигов', img: 'girl20.jpg' },
+      { name: 'Алла', age: 44, city: 'Ужгород', img: 'girl21.jpg' },
+      { name: 'Тамара', age: 53, city: 'Херсон', img: 'girl22.jpg' },
+      { name: 'Римма', age: 46, city: 'Киев', img: 'girl23.jpg' },
+      { name: 'Эмма', age: 49, city: 'Львов', img: 'girl24.jpg' },
+      { name: 'Майя', age: 52, city: 'Одесса', img: 'girl25.jpg' },
+      { name: 'Инна', age: 45, city: 'Харьков', img: 'girl26.jpg' },
+      { name: 'Алина', age: 48, city: 'Днепр', img: 'girl27.jpg' },
+      { name: 'Полина', age: 51, city: 'Запорожье', img: 'girl28.jpg' },
+      { name: 'Диана', age: 47, city: 'Винница', img: 'girl29.jpg' },
+      { name: 'Карина', age: 50, city: 'Полтава', img: 'girl30.jpg' }
     ];
 
     // ===== GET UNIQUE RANDOM PROFILES =====
