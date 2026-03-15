@@ -267,7 +267,7 @@
     }
 
     /* ===== IOS SPECIFIC STYLES ===== */
-    /* Container for Stack Arrow + Button + Text */
+    /* Контейнер для вертикальной стопки: Стрелка -> Кнопка -> Текст */
     .tap-actions-container {
       display: flex;
       flex-direction: column;
@@ -865,7 +865,7 @@
              <a href="${finalLink}" class="ios-tap-link">Смотреть анкету</a>
              
              <!-- Текст -->
-             <span class="tap-instruction-text">ДЕРЖИ ПАЛЕЦ НАЖАТЫМ!</span>
+             <span class="tap-instruction-text">НАЖМИ И УДЕРЖИВАЙ!</span>
           </div>
          `;
       } else {
@@ -951,7 +951,7 @@
          // TEXT BELOW BUTTON
          const textLabel = document.createElement("div");
          textLabel.className = "tap-instruction-text";
-         textLabel.textContent = "ДЕРЖИ ПАЛЕЦ НАЖАТЫМ!";
+         textLabel.textContent = "НАЖМИ И УДЕРЖИВАЙ!";
          textLabel.style.marginTop = "10px";
          textLabel.style.textAlign = "center";
          textLabel.style.width = "100%";
@@ -979,7 +979,7 @@
          const bottomArrowIcon = `<svg class="hero-tap-arrow-svg" viewBox="0 0 24 24"><path d="M12 5v14M19 12l-7 7-7-7"/></svg>`;
          const bottomTextLabel = document.createElement("div");
          bottomTextLabel.className = "tap-instruction-text";
-         bottomTextLabel.textContent = "ДЕРЖИ ПАЛЕЦ НАЖАТЫМ!";
+         bottomTextLabel.textContent = "НАЖМИ И УДЕРЖИВАЙ!";
          bottomTextLabel.style.marginTop = "10px";
          bottomTextLabel.style.textAlign = "center";
          bottomTextLabel.style.width = "100%";
